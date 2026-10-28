@@ -1,7 +1,7 @@
 {
-  "version": "0.9.4",
-  "build": 6,
-  "url": "https://raw.githubusercontent.com/akuzin8/chistovik-releases/main/Chistovik-0.9.4.zip",
-  "signature": "SZiWJwWE+c4jevokJaT0OndRbTcsfDootKfw6gxlrfwgONTmFB47Gz/I31as7kwaAXRhjVamb2Cp08ex4A8bAw==",
-  "notes": "• Сообщает о новых версиях и обновляется в одно нажатие.\n• Знает больше слов из деловой переписки: «предоплатты» → «предоплаты».\n• Заглавная буква в начале предложения: «Привет. как дела» → «Привет. Как дела».\n• «ну..» → «ну...», «!?» → «?!».\n• Правила нетикета (включаются в настройках): не больше трёх «!!!» и «)))», «спасибо:)» → «спасибо :)».\n• «Njtcnm» → «То есть» и другие частые ошибки."
+  "version": "0.9.5",
+  "build": 7,
+  "url": "https://raw.githubusercontent.com/akuzin8/chistovik-releases/main/Chistovik-0.9.5.zip",
+  "signature": "Yf200yyI0K7KhgIIXDKHR2UWsnkhtG+Q3syPSuOvKaeMS4kYEILW+XWWj9SWgizfFarWSoeDm6aKjLzaZHYTAA==",
+  "notes": "• Чистота речи (Pro): раз в неделю — какие слова-паразиты и сленг прилипли и чем их заменить, плюс старинное «слово недели». В тексте ничего не меняется.\n• «поумолчанию» → «по умолчанию», «выпускем» → «выпускаем», «репозиторй» → «репозиторий».\n• Правила набора и правила нетикета — с описанием по нажатию на подчёркнутое слово.\n• Понятные подписи в настройках."
 }

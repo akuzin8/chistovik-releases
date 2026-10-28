@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Чистовик Pro</title>
+<style>
+  :root { --bg: #f5f5f7; --card: #fff; --text: #1d1d1f; --muted: #6e6e73; --blue: #0071e3; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #000; --card: #1c1c1e; --text: #f5f5f7; --muted: #a1a1a6; --blue: #2997ff; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+  main { max-width: 560px; margin: 0 auto; padding: 64px 16px; text-align: center; }
+  .icon { width: 88px; height: 88px; border-radius: 20px; background: var(--card); display: inline-flex; align-items: center;
+          justify-content: center; font-size: 44px; font-weight: 700; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+  h1 { font-size: 40px; letter-spacing: -0.5px; margin: 20px 0 6px; }
+  p { color: var(--muted); margin: 0 0 24px; }
+  .button { display: inline-block; background: var(--blue); color: #fff; text-decoration: none; padding: 12px 28px;
+            border-radius: 999px; font-size: 17px; }
+  .card { background: var(--card); border-radius: 18px; padding: 20px; margin-top: 40px; text-align: left; }
+  .card h2 { font-size: 15px; margin: 0 0 8px; }
+  .card ol { color: var(--muted); font-size: 15px; padding-left: 20px; margin: 0 0 14px; }
+  code { display: block; word-break: break-all; font: 13px/1.5 ui-monospace, Menlo, monospace; background: var(--bg);
+         border-radius: 10px; padding: 12px; }
+  button { margin-top: 12px; border: 1px solid var(--blue); color: var(--blue); background: none; border-radius: 999px;
+           padding: 8px 20px; font-size: 15px; cursor: pointer; }
+  .error { color: #c9342f; }
+</style>
+</head>
+<body>
+<main>
+  <div class="icon">Ч</div>
+  <h1>Чистовик Pro</h1>
+  <p id="lead">Спасибо за покупку! Нажмите кнопку — Чистовик откроется и включит Pro.</p>
+  <a class="button" id="open" href="#">Включить Pro в Чистовике</a>
+  <div class="card" id="manual">
+    <h2>Если кнопка не сработала</h2>
+    <ol>
+      <li>Скопируйте ключ.</li>
+      <li>Откройте Чистовик: значок Ч в строке меню → Настройки → Pro → «Ввести ключ».</li>
+      <li>Вставьте ключ и нажмите «Активировать».</li>
+    </ol>
+    <code id="key"></code>
+    <button id="copy">Скопировать ключ</button>
+  </div>
+</main>
+<script>
+  // The key comes after "#": the browser never sends it to the server.
+  const params = new URLSearchParams(location.hash.slice(1));
+  const key = params.get('key') || '';
+  const email = params.get('email') || '';
+  if (!/^CHPRO[A-Z2-7]{100,}$/.test(key)) {
+    document.getElementById('lead').textContent = 'В ссылке нет ключа. Скопируйте ссылку из письма целиком или напишите на akuzin8@gmail.com.';
+    document.getElementById('lead').className = 'error';
+    document.getElementById('open').style.display = 'none';
+    document.getElementById('manual').style.display = 'none';
+  } else {
+    const grouped = 'CHPRO-' + key.slice(5).match(/.{1,5}/g).join('-');
+    document.getElementById('key').textContent = grouped;
+    const app = 'chistovik://pro?key=' + key + (email ? '&email=' + encodeURIComponent(email) : '');
+    document.getElementById('open').href = app;
+    document.getElementById('copy').onclick = () => {
+      navigator.clipboard.writeText(grouped).then(() => { document.getElementById('copy').textContent = 'Скопировано'; });
+    };
+    setTimeout(() => { location.href = app; }, 600);
+  }
+</script>
+</body>
+</html>

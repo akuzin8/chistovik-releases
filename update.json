@@ -1,7 +1,7 @@
 {
-  "version": "0.9.8",
-  "build": 10,
-  "url": "https://raw.githubusercontent.com/akuzin8/chistovik-releases/main/Chistovik-0.9.8.zip",
-  "signature": "IusE6vMomYNR5cLc9+Wtiq95YHCeWF71Y4lh+ZUnZygMZ86oqQzxBp93r5lGH1Td+GNMPewoxq83yFdvPXaTAg==",
-  "notes": "• Мысль недели: в конце еженедельной сводки — мысль о слове, речи и понимании от великих авторов. 365 мыслей, без повторов.\n• Мои ошибки (Pro): три самые частые ошибки и правила к ним — Настройки → История.\n• Правило недели в сводке — по вашей самой частой ошибке.\n• Кавычка, открытая давно или в прошлом сообщении, больше не переезжает к слову.\n• «смс» не превращается в «cvc», «О программе» и названия программ в меню — короче и аккуратнее."
+  "version": "0.9.9",
+  "build": 11,
+  "url": "https://raw.githubusercontent.com/akuzin8/chistovik-releases/main/Chistovik-0.9.9.zip",
+  "signature": "lA6DjTvKio99tICsp4LC98PqI83f7JJzsJo7yHU2mBTnpfM5ql3hNeV0e2Rs2rcg18yIt41qOlaj++8A+HoxBw==",
+  "notes": "• Понятнее настройка «Чистоты речи»: «Какие слова считать паразитами и сленгом»."
 }
